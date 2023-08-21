@@ -10,7 +10,7 @@ console.log(typeof key);// typeof : 타입 반환
 //객체 타입
 //자스의 데이터 타입은 크게 원시타입, 객체타입으로 분류됨
 //number, string, boolean, undefined, null, symbol 6가지 데이터 타입 이외의 값은
-//모두 객체 타입으로 객체, 함수, 배열 등에 대해서 추후 하나씩 자세히 다뤄
+//모두 객체 타입으로 객체, 함수, 배열 등에 대해서 추후 하나씩 자세히 다뤄봄
 var obj = {}; // 객체 생성
 obj[key] = 'value';
 console.log(obj[key]); //value출력됨~
