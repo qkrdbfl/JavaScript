@@ -37,9 +37,7 @@ var browser = 'Edge';   // 'Chrome', 'Firefox' 등으로 변경해서 테스트
     console.log("==============================================")
 
 //switch문
-switch (browser){
-    case "Edge"
-}
+
 
 
 
