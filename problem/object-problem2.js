@@ -18,6 +18,7 @@ const calculator = {
 
   //객체 생성자로 계산기 객체 만들기
   function Calculator() {
+  
     this.a = 10;
     this.b = 20;
   
@@ -30,5 +31,7 @@ const calculator = {
     };
   }
   
-  console.log("합 : ", calculator.sum());
-  console.log("곱 : ", calculator.multi());
+  const func = new Calculator();
+
+  console.log("합 : ", func.sum());
+  console.log("곱 : ", func.multi());
