@@ -19,7 +19,7 @@ target = 'abcdefg';
 // 임의의 2자리 문자열 전역 검색
 console.log(target.match(/../g)); // [ 'ab', 'cd', 'ef' ]
 console.log('-------------------------------------');
-
+ 
 //2) {m,n} : 최소 m번, 최대 n번 반복 되는 문자열 (반복 검색)
 target = 'a aa aaa b bb bbb ab aab abb';
 // a 최소 2번 ~ 최대 3번 반복되는 문자열을 전역으로 찾겠다
