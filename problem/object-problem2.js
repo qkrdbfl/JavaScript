@@ -31,7 +31,7 @@ const calculator = {
     };
   }
   
-  const func = new Calculator();
+  const func = new Calculator();//생성자
 
   console.log("합 : ", func.sum());
   console.log("곱 : ", func.multi());
