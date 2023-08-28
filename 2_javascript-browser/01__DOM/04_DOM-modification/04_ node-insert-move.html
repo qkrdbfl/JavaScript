@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>04. node insert move</h1>
+
+    <h3>노드 삽입과 이동</h3>
+    <p>
+         Node.prototype.appendChild(childNode) :
+         인수로 전달받은 노드를 appendChild 메서드를 호출한 노드의 "마지막 자식" 노드로 추가
+         Node.prototype.insertBefore(newNode, childNode) : 
+         첫 번째 인수로 전달받은 노드를 두 번째 인수로 "전달 받은 노드 앞에" 삽입.
+         두 번째 인수로 전달 받은 노드는 반드시 insertBefore 메서드를 호출한 노드의 자식 노드여야 한다.
+    </p>
+
+    <ul id="drink">
+        <li>커피</li>
+    </ul>
+
+    <script>
+        const $drink = document.getElementById('drink');
+
+        const $li1 = document.createElement('li');
+        $li1.textContent = '콜라';
+
+        $drink.appendChild($li1); //appendChild은 마지막 자식으로 추가됨
+
+        const $li2 = document.createElement('li');
+        $li2.textContent = '우유';
+
+        $drink.insertBefore($li2, $drink.lastElementChild);//lastElementChild 가장 끝에 있는 자식 노드
+
+        const $li3 = document.createElement('li');
+        $li2.textContent = '사이다';
+
+        //두번째 인수가 $drink의 자식 노드가 아니므로 DOMException 발생
+        //$drink.insertBefore($li3, document.querySelector("p")); //querySelector를 써서 p노드를 가져옴
+
+        //두번쨰 인수가 null이면 appendChild처럼 마지막 자식 노드로 추가
+        $drink.insertBefore($li3, null);
+    </script>
+
+    <h3>노드 이동</h3>
+    <p>
+        DOM에 이미 존재하는 노드를 appendChild, insertBefore 메서드를 사용하여 DOM에 다시 추가
+        하면 현재 위치에서 노드를 제거하고 새로운 위치에 노드를 추가하는 노드 이동이 발생한다.
+    </p>
+
+    <ul id="food">
+        <li>파스타</li>
+        <li>피자</li>
+    </ul>
+
+    <script>
+        const $food = document.getElementById('food')
+
+        const $pasta = $food.firstElementChild;
+        const $pizza = $food.lastElementChild;
+
+        $drink.appendChild($pasta); // 파스타가 사이다 밑으로 옮겨감(추가)
+
+        $drink.insertBefore($pizza, $pasta);// 피자가 파스타 앞에 삽입됨
+
+    </script>
+</body>
+</html>
